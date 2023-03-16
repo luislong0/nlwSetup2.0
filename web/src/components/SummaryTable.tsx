@@ -45,8 +45,8 @@ export function SummaryTable({ userPage, searchUserId }: SummaryTableProps) {
   }, [userInfo]);
 
   return (
-    <div className="w-full max-w-5xl pb-5 flex overflow-x-scroll scrollbar-thin scrollbar-thumb-violet-500 scrollbar-track-zinc-900 overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
-      <div className="grid grid-rows-7 grid-flow-row gap-3">
+    <div className="w-full max-w-5xl pb-5 flex scrollbar-thin scrollbar-thumb-violet-500 scrollbar-track-zinc-900 overflow-y-scroll scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
+      <div className="grid grid-rows-7 grid-flow-row gap-3 ">
         {weekDays.map((weekDay, index) => {
           return (
             <div

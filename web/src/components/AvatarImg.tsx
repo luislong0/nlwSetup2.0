@@ -26,7 +26,7 @@ export function AvatarImg(props: AvatarImgProps) {
     <img
       src={props.photoUrl}
       alt="Avatar photo"
-      className="w-16 rounded-full p-[2px] border border-violet-500"
+      className="w-16 rounded-full p-[2px] border border-violet-500 max-[600px]:w-20"
       referrerPolicy="no-referrer"
     />
   );

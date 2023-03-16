@@ -11,13 +11,17 @@ import { FriendsBtn } from "./FriendsBtn";
 import { NewHabitForm } from "./NewHabitForm";
 import { SearchBtn } from "./SeachBtn";
 
-export function Header() {
+export function MobileHeader() {
   const { userInfo } = useContext(UserContext);
 
   return (
-    <div className="w-full max-w-5xl mx-auto flex items-center justify-between max-[601px]:hidden">
-      <img src={logoImage} alt="Habits" />
-      <div className="flex items-center gap-6">
+    <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center min-[601px]:hidden">
+      <div className="flex w-full justify-between ">
+        <img src={logoImage} alt="Habits" />
+        <AvatarImg photoUrl={userInfo.photoUrl} />
+      </div>
+
+      <div className="flex items-center gap-6 w-full justify-between mt-10">
         <Dialog.Root>
           <Dialog.Trigger
             type="button"
@@ -44,9 +48,10 @@ export function Header() {
           </Dialog.Portal>
         </Dialog.Root>
 
-        <SearchBtn />
-        <FriendsBtn userInfoId={userInfo.id} />
-        <AvatarImg photoUrl={userInfo.photoUrl} />
+        <div className="flex gap-3">
+          <SearchBtn />
+          <FriendsBtn userInfoId={userInfo.id} />
+        </div>
       </div>
     </div>
   );
